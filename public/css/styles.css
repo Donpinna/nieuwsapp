@@ -28,7 +28,6 @@ img {
 p {
   margin: 10px 0;
   font-size: 0.8em;
-  font-family: 'Merriweather', serif;
 
 }
 .info {
@@ -38,7 +37,7 @@ p {
 
 }
 h1 {
-  margin: 45px 0px 15px 45px;
+  margin: 45px 10px 50px 130px;
   font-size: 35px;
 }
 
