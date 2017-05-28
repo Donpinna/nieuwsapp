@@ -1,0 +1,53 @@
+<% include header %>
+
+<nav>
+  <img class="logo" src="http://www.awkwordrap.com/wp-content/uploads/2014/01/hotnewhiphop.png" alt="Logo"> <br>
+  <% for (var i = 0; i < categorieen.length; i++) { %>
+    <a href="/categorieen/<%- i %>"><%- categorieen[i] %></a>
+  <% } %>
+</nav>
+
+<% var teller = 1; %>
+<% nieuws.forEach(function(item){ %>
+  <div class="section group">
+  	<div class="col span_1_of_2">
+      <section>
+        <div class="title-over-img">
+    <div class="content-item" style="width:400px">
+      <div class="pic">
+        <img class="indeximg" src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>">
+      </div>
+      <div class="info">
+        <h2 class="entry-title"><a class="titel" href=/items/<%- item.id %>><%- item.titel %></a></h2>
+        <div class="entry-meta"><a class="cat" href=/items/>Boksen</a></div>
+      </div>
+    </div>
+</div>
+          <p class="info"><%- item.datum %> - Door: <%- item.auteur %></p>
+
+          <p><%- item.samenvatting %></p>
+      </section>
+
+  	</div>
+
+
+
+  </div>
+
+
+<% teller++;}); %>
+
+<% include footer %>
+
+<div id="disqus_thread"></div>
+<script>
+
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://demorgensport.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
